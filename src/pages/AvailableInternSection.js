@@ -19,14 +19,15 @@ const AvailableInternSection = () => {
 
     
     <div className="w-full py-10">
-      <h2 className="text-2xl font-bold text-black ml-12 mb-6">
+      <h2 className="text-2xl font-bold text-black ml-14 mb-6">
         AVAILABLE INTERN
       </h2>
-      <div className="flex justify-center gap-6 flex-wrap">
-        {interns.map((intern, index) => (
-          <AvailableInternCard key={index} {...intern} />
-        ))}
-      </div>
+      <div className="flex flex-wrap justify-between py-2 mx-14 gap-2">
+  {interns.map((intern, index) => (
+    <AvailableInternCard key={index} {...intern} />
+  ))}
+</div>
+
     </div>
   );
 };

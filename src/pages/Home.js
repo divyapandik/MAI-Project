@@ -19,6 +19,8 @@ export default function Home() {
     { image: stone, name: "Stone Fixing" },
     { image: Electricwork, name: "Electrical Works" },
     { image: Garden1, name: "Gardening Setup" },
+     { image: Garden2, name: "Interior Works" },
+
   ];
 
   const projects2 = Array(4).fill({
@@ -42,7 +44,7 @@ export default function Home() {
         className="relative w-full flex flex-col md:flex-row items-center justify-between max-w-[1550px] mx-auto bg-cover bg-center"
         style={{ backgroundImage: `url(${rectangle})` }}
       >
-        <div className="w-full md:w-[698px] px-6 md:px-12 py-16 text-white ml-12">
+        <div className="w-full md:w-[698px] px-6 md:px-12 py-16 text-white ml-8">
           <h1 className="font-bold text-3xl md:text-5xl leading-tight tracking-wide">
             Manage your project
             <span className="ml-2 bg-gradient-to-r from-[#25E905] via-[#5EC5FF] to-[rgba(255,245,9,0.97)] bg-clip-text text-transparent">
@@ -69,11 +71,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center gap-6 py-2">
-          {projects.map((project, index) => (
-            <img key={index} src={project.image} alt={project.name} className="max-w-xs md:max-w-sm" />
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-between py-2 mx-12 gap-4">
+  {projects.map((project, index) => (
+    <img key={index} src={project.image} alt={project.name} className="w-[250px] h-[300px] object-cover rounded-md" />
+  ))}
+</div>
+
       </section>
 
       <section className="w-full max-w-[1440px] mx-auto mt-10 px-4">

@@ -35,8 +35,8 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <div className="w-full py-10">
-      <h2 className="text-2xl font-bold text-black mb-6 ml-12">PROJECTS</h2>
-      <div className="flex justify-center gap-6 flex-wrap">
+      <h2 className="text-2xl font-bold text-black mb-6 ml-14">PROJECTS</h2>
+      <div className="flex justify-between gap-6 mx-12 flex-wrap">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
